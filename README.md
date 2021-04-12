@@ -41,14 +41,8 @@ let c = 3;
 * Плохой вариант:
 let directive = "No identification of self or mission."
 
-* Плохой вариант:
-let saying = 'Say it ain\u0027t so.';
-
 * Хороший вариант:
 let directive = 'No identification of self or mission.';
-
-* Хороший вариант:
-let saying = `Say it ain't so`;
 
 5. **Для создания объекта используйте фигурные скобки. Не создавайте объекты через конструктор new Object.**
 
@@ -70,26 +64,26 @@ let superman = {defaults: { clark: 'kent' }, type: 'alien', hidden: true};
 
 * Хороший вариант:
 let superman = {
-  defaults: { clark: 'kent' },
-  type: 'alien',
-  hidden: true
-};
+    defaults: { clark: 'kent' },
+    type: 'alien',
+    hidden: true
+  };
 
 7. **Не используйте символов продолжения строки для длинных строк.**
 Не используйте символы продолжения строки (т. е., обратный слэш для окончания строки внутри строкового литерала) как в обычных,так и в шаблонных строковых литералах. Несмотря на то что ES5 это допускает, это может привести к замысловатым ошибкам, если после слэша последует пробел. Кроме того, это менее понятно для читателя.
 
 
 * Плохой вариант:
-const longString = 'This is a very long string that \
-    far exceeds the 80 column limit. It unfortunately \
-    contains long stretches of spaces due to how the \
-    continued lines are indented.';
+  const longString = 'This is a very long string that /
+      far exceeds the 80 column limit. It unfortunately /
+      contains long stretches of spaces due to how the /
+      continued lines are indented.';
 
 * Хороший вариант:
-const longString = 'This is a very long string that ' +
-    'far exceeds the 80 column limit. It does not contain ' +
-    'long stretches of spaces since the concatenated ' +
-    'strings are cleaner.';
+  const longString = 'This is a very long string that ' +
+      'far exceeds the 80 column limit. It does not contain ' +
+      'long stretches of spaces since the concatenated ' +
+      'strings are cleaner.';
 
 8. **Используйте программную табуляцию (ее поддерживают все современные редакторы кода и IDE) из двух пробелов.**
 
