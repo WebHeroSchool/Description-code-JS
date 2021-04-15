@@ -117,7 +117,6 @@ JavaScript не поддерживает массивы с именованны�
 >// Declare and initiate at the beginning  
 var firstName = "",  
 lastName = "",  
-price=0,  
 discount = 0,  
 fullPrice = 0,  
 myArray = [],  
